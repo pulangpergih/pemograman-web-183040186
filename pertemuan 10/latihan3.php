@@ -19,22 +19,13 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
        max-height: 100%;
        width: 150px;
      }
-     button{
-       background-color: white!important;
-       color: white !important;
-       
-     }
-     button:hover{
-       background-color: coral !important;
-       color: white !important;
-     }
+     
      a{
-       color: black;
-       text-decoration: none !important;
+       color: white !important;
+       text-decoration: none;
      }
-     a:hover{
-      color: white !important;
-     }
+    
+    
     </style>
   </head>
   <body>
@@ -43,6 +34,10 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         <div class="row">
           <div class="col">
               <h3>Daftra Mahasiswa</h3>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a href="tambah.php">Tambah Data Mahasiswa</a>
+                  </button>
+                  <br><br>
               <table class="table table-bordered table-hover">
               <thead class="table-dark">
                 <tr>
