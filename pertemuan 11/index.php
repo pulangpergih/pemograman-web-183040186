@@ -1,7 +1,11 @@
 <?php 
 require 'functions.php';
-
 $mahasiswa = query("SELECT * FROM mahasiswa");
+
+if(isset($_POST['cari'])){
+  $mahasiswa = cari($_POST['keyword']);
+}
+
 ?>
 
 <!doctype html>
@@ -38,6 +42,16 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                     <a href="tambah.php">Tambah Data Mahasiswa</a>
                   </button>
                   <br><br>
+                  <form action="" method="POST">
+                  <div class="col-3 mb-3">
+                    <label class="form-label">Pencarian</label>
+                    <input type="text" name="keyword" class="form-control" placeholder="masukkan keyword pencarian.."
+                    autocomplete="off" autofocus >
+                    <button type="submit" name="cari" class="btn btn-primary mt-2">
+                        Cari
+                    </button>
+                  </div>
+                  </form>
               <table class="table table-bordered table-hover">
               <thead class="table-dark">
                 <tr>
@@ -46,6 +60,13 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                   <th scope="col">Nama</th>
                   <th scope="col">Aksi</th>
                 </tr>
+                <?php if(empty($mahasiswa)) : ?>
+                <tr>
+                  <td colspan="4" style="background-color: white;">
+                    <p class="text-center mt-5 mb-5" style="color: tomato;">Data mahasiswa tidak ditemukan</p>
+                  </td>
+                </tr>
+                <?php endif; ?>
               </thead>
               <tbody>
                 <?php $i= 1; ?>
@@ -53,7 +74,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
               <tr class="text-center">
                   <th scope="row"><?= $i++; ?></th>
                   <td><img src="img/<?= $mhs["gambar"]; ?>"></td>
-                  <td ><?= $mhs["nama"]; ?></td>
+                  <td style="font-weight:bold;" ><?= $mhs["nama"]; ?></td>
                   <td>
                                 <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
