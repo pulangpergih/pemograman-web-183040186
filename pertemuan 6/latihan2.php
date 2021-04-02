@@ -1,9 +1,24 @@
 <?php 
+// array Numerik
+$mhs =[
+    ["Raka DwiKS", "18304086", "pulangpergi@gmail.com", "Teknik Informatika"],
+    ["Fatnan", "18301890", "fatnanajah@gmail.com", "Teknik Informatika"]
+];
+echo "Array Numerik";
+echo "<br>";
+echo "------------------------";
+echo "<br>"; 
+echo $mhs[0][0];
+    echo "<br>";
+    echo $mhs[0][1];
+    echo "<br>";
+    echo $mhs[0][2];
+    echo "<br>";
+    echo $mhs[0][3];
+echo "<br>";
 
-// $mahasiswa =[
-//     ["Raka DwiKS", "18304086", "pulangpergi@gmail.com", "Teknik Informatika"],
-//     ["Fatnan", "18301890", "fatnanajah@gmail.com", "Teknik Informatika"]
-// ];
+
+// Array Associative
 $mahasiswa = [
     [
 
@@ -22,7 +37,19 @@ $mahasiswa = [
         "foto"=> "02.jpg"
         
     ]
-];
+]; 
+echo "<br>";
+echo "Array Associative";
+echo "<br>";
+echo "------------------------";
+echo "<br>";
+echo $mahasiswa["nama"]= "Raka Dwi Kris Setiawan";
+echo "<br>";
+echo $mahasiswa["nrp"]= "183040186";
+echo "<br>";
+echo $mahasiswa["email"]= "pulangpergi@mail.com";
+echo "<br>";
+echo $mahasiswa["jurusan"]= "Teknik Informatika";
 ?>
 
 <!DOCTYPE html>
