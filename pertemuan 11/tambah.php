@@ -4,7 +4,7 @@ if(isset($_POST['tambah'])) {
   if (tambah($_POST) > 0){
     echo "<script>
           alert('data berhasil ditambahkan');
-          document.location.href = 'index.php';
+          document.location.href = 'latihan3.php';
           </script>";
   }else {
     echo "data gagal ditambah!";
@@ -54,7 +54,7 @@ if(isset($_POST['tambah'])) {
                 </div>
                 <button type="submit" name="tambah" class="btn btn-primary">Tambah</button>
                 <button class="btn btn-primary">
-                <a href="index.php" style="color: white; text-decoration:none;" >kembali</a>
+                <a href="latihan3.php" style="color: white; text-decoration:none;" >kembali</a>
                 </button>
               </form>
               </div>
