@@ -22,6 +22,26 @@ if(isset($_POST['login'])){
     <link rel="stylesheet" href="style/main.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <title>Login</title>
+    <style>
+   .card-body{
+     margin-top: 250px !important;
+   }
+   a{
+     text-decoration: none;
+     border-color: 1px !important;
+     width: 100px !important;
+     border-radius: 10px;
+     height: 30px;
+     text-align: center;
+   }
+   a:hover{
+     color: blue !important;
+     background-color: #fff;
+   }
+   button{
+     border-radius: 10px !important;
+   }
+    </style>
   </head>
   <body>
       <main>
@@ -52,7 +72,12 @@ if(isset($_POST['login'])){
                               <?php if(isset($login['error'])) : ?>
                                <p style="color: red; font-style:italic; font-size:small;" class="mb-0"><?= $login['pesan']; ?></p>
                               <?php endif ; ?>
-                          <button type="submit" name="login" class="btn btn-primary mt-2">Submit</button>
+                              <div class="row  justify-content-center">
+                                <button type="submit" name="login" class="btn btn-primary btn-sm mb-2 mt-3" style="width: 100px;" >Login</button>
+                                <h6 class="text-center">or</h6>
+                                <a class="border text-center" style="color: white;"   href="registrasi.php">Registrasi</a>
+                            </div>    
+                          </div>
                     </form>
                   </div>
                 </div>

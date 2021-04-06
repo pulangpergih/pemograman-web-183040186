@@ -72,8 +72,6 @@ if(isset($_POST['cari'])){
                     autocomplete="off" autofocus>
                       <button class="btn btn-outline-success" type="submit" name="cari">Search</button>
                     </form>
-                  
-                    
                   </div>
                   
               <table class="table table-bordered table-hover">
