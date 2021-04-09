@@ -1,0 +1,14 @@
+.card {
+  background-color: transparentize($color: #000000, $amount: 0.5);
+  float: right;
+  .card-body {
+    margin-top: 300px;
+    color: #ffff;
+  }
+}
+
+.header {
+  position: absolute;
+  background-size: auto;
+  padding-right: 12px;
+}
